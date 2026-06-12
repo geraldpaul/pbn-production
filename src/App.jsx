@@ -15,23 +15,18 @@ export default function App() {
           className="w-full h-full object-fill transition-transform duration-700 group-hover:scale-[1.01]"
         />
 
-        {/* MID-LEFT SUBTLE UNDERLAY FLAP PANEL */}
-        {/* top-1/2 and -translate-y-1/2 handles exact vertical centering */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 
-                        bg-gradient-to-r from-black/40 via-black/20 to-transparent
-                        backdrop-blur-[6px] border-y border-r border-white/10
-                        pl-8 pr-12 py-8 rounded-r-2xl 
-                        flex flex-row items-center gap-4
-                        transition-all duration-300 hover:border-white/20 hover:from-black/50">
+        {/* MID-LEFT MINIMALIST INTERACTIVE CONTAINER */}
+        {/* top-1/2 with custom translate shifts the row precisely ~3.5mm (14px) above the true center line */}
+        <div className="absolute left-8 top-1/2 -translate-y-[calc(50%+14px)] z-10 flex flex-row items-center gap-4">
           
-          {/* Premium High-Contrast Subtle CTA */}
-          <button className="group flex items-center justify-center gap-2 bg-white/10 hover:bg-white text-white hover:text-[#0B1528] border border-white/20 hover:border-white text-sm font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-black/20 whitespace-nowrap">
+          {/* Gold Filled Core Action Button */}
+          <button className="group flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-[#0B1528] font-bold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/10 active:scale-[0.98] whitespace-nowrap">
             <span>Launch Platform</span>
-            <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="w-4 h-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
 
-          {/* Subtle Secondary Transparent Trigger */}
-          <button className="flex items-center justify-center gap-2 bg-[#0B1528]/40 hover:bg-[#0B1528]/70 border border-white/10 hover:border-white/20 text-white/80 hover:text-white text-sm font-medium px-5 py-3 rounded-xl transition-all duration-200 whitespace-nowrap">
+          {/* Gold Outline Secondary Action Button */}
+          <button className="flex items-center justify-center gap-2 bg-black/30 hover:bg-amber-500/20 border border-amber-500/40 hover:border-amber-400 text-amber-400 hover:text-amber-300 text-sm font-semibold px-5 py-3 rounded-xl backdrop-blur-md transition-all duration-200 whitespace-nowrap">
             <Play className="w-4 h-4 fill-current" />
             <span>Overview</span>
           </button>
