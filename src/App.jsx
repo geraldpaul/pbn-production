@@ -16,17 +16,17 @@ export default function App() {
         />
 
         {/* MID-LEFT MINIMALIST INTERACTIVE CONTAINER */}
-        {/* top-1/2 with custom translate shifts the row precisely ~3.5mm (14px) above the true center line */}
+        {/* Shifted precisely ~3.5mm (14px) above the true center line */}
         <div className="absolute left-8 top-1/2 -translate-y-[calc(50%+14px)] z-10 flex flex-row items-center gap-4">
           
-          {/* Gold Filled Core Action Button */}
-          <button className="group flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-[#0B1528] font-bold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/10 active:scale-[0.98] whitespace-nowrap">
-            <span>Launch Platform</span>
-            <ArrowUpRight className="w-4 h-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          {/* Black & White Core Action Button */}
+          <button className="group flex items-center justify-center gap-2 bg-black/80 hover:bg-black border border-white text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-xl shadow-black/40 active:scale-[0.98] whitespace-nowrap">
+            <span>Join Community</span>
+            <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
 
-          {/* Gold Outline Secondary Action Button */}
-          <button className="flex items-center justify-center gap-2 bg-black/30 hover:bg-amber-500/20 border border-amber-500/40 hover:border-amber-400 text-amber-400 hover:text-amber-300 text-sm font-semibold px-5 py-3 rounded-xl backdrop-blur-md transition-all duration-200 whitespace-nowrap">
+          {/* Black & White Secondary Action Button */}
+          <button className="flex items-center justify-center gap-2 bg-black/60 hover:bg-black/90 border border-white/60 hover:border-white text-white/80 hover:text-white text-sm font-medium px-5 py-3 rounded-xl backdrop-blur-sm transition-all duration-200 whitespace-nowrap">
             <Play className="w-4 h-4 fill-current" />
             <span>Overview</span>
           </button>
