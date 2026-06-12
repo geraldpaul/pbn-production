@@ -6,14 +6,14 @@ export default function App() {
     <div className="min-h-screen bg-[#0B1528] flex items-center justify-center p-4 sm:p-8 font-sans antialiased">
       
       {/* PERFECT 1600x550 VISUAL WRAPPER */}
-      <div className="relative w-full max-w-[1600px] h-[550px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800/40 group">
-        
-        {/* Full Width Unsplash Asset (No Overlay Layer) */}
-        <img 
-          src="/hero-banner.png"
-          alt="Premium Tech Asset Pipeline Display" 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]"
-        />
+     <div className="relative w-full max-w-[1600px] h-[550px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800/40 group">
+  
+  {/* Full Width Asset Forced to Fit Perfect Boundaries */}
+  <img 
+    src="/hero-banner.png"
+    alt="Premium Tech Asset Pipeline Display" 
+    className="w-full h-full object-fill transition-transform duration-700 group-hover:scale-[1.01]"
+  />
 
         {/* BOTTOM-RIGHT MINIMALIST INTERACTIVE CONTAINER */}
         <div className="absolute bottom-6 right-6 z-10 flex items-center gap-3">
