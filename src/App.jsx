@@ -1,68 +1,37 @@
 import React from 'react';
-import { ArrowRight, Shield, Activity, Zap } from 'lucide-react';
+import { ArrowUpRight, Play } from 'lucide-react';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0B1528] text-white font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#0B1528] flex items-center justify-center p-4 sm:p-8 font-sans antialiased">
       
-      {/* IMMERSIVE FULL-WIDTH HERO */}
-      <div className="relative w-full min-h-screen flex items-center justify-center">
+      {/* PERFECT 1600x550 VISUAL WRAPPER */}
+      <div className="relative w-full max-w-[1600px] h-[550px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800/40 group">
         
-        {/* Absolute Full-Width & Full-Height Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80" 
-            alt="Immersive Global Networking Tech Background" 
-            className="w-full h-full object-cover"
-          />
-          {/* Universal overlay layer to ensure text contrast and reduce cognitive load */}
-          <div className="absolute inset-0 bg-[#0B1528]/80 backdrop-blur-[2px]" />
-        </div>
+        {/* Full Width Unsplash Asset (No Overlay Layer) */}
+        <img 
+          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&h=550&q=90" 
+          alt="Premium Tech Asset Pipeline Display" 
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+        />
 
-        {/* Centered Content Container */}
-        <div className="relative z-10 max-w-5xl w-full mx-auto px-6 text-center flex flex-col items-center justify-center">
+        {/* BOTTOM-RIGHT MINIMALIST INTERACTIVE CONTAINER */}
+        <div className="absolute bottom-6 right-6 z-10 flex items-center gap-3">
           
-          {/* Accent Badge */}
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-xs font-medium tracking-wide text-blue-400 mb-8 backdrop-blur-md">
-            <Zap className="w-3.5 h-3.5 fill-current text-blue-400" />
-            <span>Operational Architecture Live</span>
-          </div>
+          {/* Subtle Secondary Transparent Trigger */}
+          <button className="flex items-center gap-2 bg-[#0B1528]/30 hover:bg-[#0B1528]/60 border border-white/10 hover:border-white/20 text-white/80 hover:text-white text-sm font-medium px-5 py-3 rounded-xl backdrop-blur-md transition-all duration-200">
+            <Play className="w-4 h-4 fill-current" />
+            <span>Overview</span>
+          </button>
 
-          {/* Full-Width Bold Header */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none mb-6 max-w-4xl bg-gradient-to-b from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
-            Empowering Security Through Connectivity
-          </h1>
-
-          {/* Clean, Centered Supporting Copy */}
-          <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-12 font-light leading-relaxed">
-            Delivering high-velocity data coordination systems and next-generation communication pipelines engineered for premium structural reliability.
-          </p>
-
-          {/* Core Call to Action Stack */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <button className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-blue-600/20 active:scale-[0.98]">
-              <span>Access Secure Portal</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700 text-slate-200 font-medium px-8 py-4 rounded-xl transition-all duration-200 backdrop-blur-sm">
-              <span>Review Documentation</span>
-            </button>
-          </div>
-
-          {/* Trust Signals Footnote */}
-          <div className="flex flex-wrap items-center justify-center gap-8 mt-16 pt-8 border-t border-slate-800/80 w-full max-w-xl text-xs uppercase tracking-widest text-slate-400">
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-blue-500" />
-              <span>Edge Encryption</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Activity className="w-4 h-4 text-emerald-500" />
-              <span>Real-Time Routing</span>
-            </div>
-          </div>
+          {/* Premium High-Contrast Subtle CTA */}
+          <button className="group flex items-center gap-2 bg-white/10 hover:bg-white text-white hover:text-[#0B1528] border border-white/20 hover:border-white text-sm font-semibold px-6 py-3 rounded-xl backdrop-blur-md transition-all duration-300 shadow-lg shadow-black/20">
+            <span>Launch Platform</span>
+            <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </button>
 
         </div>
+
       </div>
 
     </div>
