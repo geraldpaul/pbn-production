@@ -10,7 +10,7 @@ export default function App() {
         
         {/* Full Width Unsplash Asset (No Overlay Layer) */}
         <img 
-          src="/hero-banner.png
+          src="/hero-banner.png"
           alt="Premium Tech Asset Pipeline Display" 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]"
         />
