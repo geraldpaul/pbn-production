@@ -20,7 +20,7 @@ export default function Hero() {
         
         {/* Black & White Core Action Button */}
         <button className="group flex items-center justify-center gap-2 bg-black/80 hover:bg-black border border-white text-white text-xs sm:text-sm font-semibold px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl transition-all duration-300 shadow-xl shadow-black/40 active:scale-[0.98] whitespace-nowrap">
-          <span>Launch Platform</span>
+          <span>Join Community</span>
           <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </button>
 
