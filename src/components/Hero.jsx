@@ -5,8 +5,7 @@ export default function Hero() {
   return (
     /* RESPONSIVE FLUID VISUAL WRAPPER */
     /* Prevents the asset from crunching or cutting off on mobile viewports */
-    <div className="relative w-full max-w-[1600px] aspect-[4/3] md:aspect-[32/11] rounded-2xl overflow-hidden shadow-2xl border border-slate-800/40 group">
-      
+<div className="relative w-full aspect-[4/3] md:aspect-[32/11] group"> 
       {/* Precision Scaling Engine */}
       <img 
         src="/hero-banner.png"
