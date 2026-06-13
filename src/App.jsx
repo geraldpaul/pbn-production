@@ -11,11 +11,12 @@ export default function App() {
       <Navbar />
 
       {/* 2. Main Workspace Layout Flow */}
-      {/* Adding pb-20 gives clean breathing space at the bottom of the scroll frame */}
-      <main className="w-full flex flex-col items-center justify-start p-4 sm:p-8 gap-12 pb-20">
+      <main className="w-full flex flex-col items-center justify-start p-4 sm:p-8 gap-12 pb-24">
         
+        {/* Full-width Hero Banner */}
         <Hero />
         
+        {/* Completely modular Split Screen (Content + Form Array) */}
         <Form />
 
       </main>
