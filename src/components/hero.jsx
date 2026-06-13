@@ -27,7 +27,7 @@ export default function Hero() {
         {/* Black & White Secondary Action Button */}
         <button className="flex items-center justify-center gap-2 bg-black/60 hover:bg-black/90 border border-white/60 hover:border-white text-white/80 hover:text-white text-xs sm:text-sm font-medium px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl backdrop-blur-sm transition-all duration-200 whitespace-nowrap">
           <Play className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" />
-          <span>Overview</span>
+          <span>Overview2</span>
         </button>
 
       </div>
