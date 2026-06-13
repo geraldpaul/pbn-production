@@ -65,8 +65,8 @@ export default function Form() {
               <Terminal className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-white text-sm font-semibold tracking-wide">Verified Credentials</h4>
-              <p className="text-slate-500 text-xs mt-0.5">Secure validation for active, retired, and civilian allies.</p>
+              <h4 className="text-white text-sm font-semibold tracking-wide">Verified Support</h4>
+              <p className="text-slate-500 text-xs mt-0.5">A trusted space connecting active officers, honored retirees, and dedicated civilian supporters.</p>
             </div>
           </div>
 
@@ -76,8 +76,8 @@ export default function Form() {
               <Layers className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-white text-sm font-semibold tracking-wide">National Database</h4>
-              <p className="text-slate-500 text-xs mt-0.5">Instant ledger logging for priority updates and alerts.</p>
+              <h4 className="text-white text-sm font-semibold tracking-wide">Stay Informed</h4>
+              <p className="text-slate-500 text-xs mt-0.5">Get immediate notifications regarding community updates, national initiatives, and vital news.</p>
             </div>
           </div>
 
@@ -86,7 +86,7 @@ export default function Form() {
         {/* System Status Banner Note */}
         <div className="border-l-2 border-slate-700 pl-4 py-1 text-slate-500 text-xs max-w-md italic flex items-center gap-2">
           <Radio className="w-3.5 h-3.5 animate-pulse text-slate-400" />
-          All membership applications undergo encrypted routing and review by the administration desk.
+          All entries are processed securely and reviewed directly by our team to protect the integrity of our community.
         </div>
 
       </div>
