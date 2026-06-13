@@ -5,10 +5,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: 'Dashboard', href: '#dashboard' },
-    { name: 'Assets', href: '#assets' },
-    { name: 'Analytics', href: '#analytics' },
-    { name: 'Compliance', href: '#compliance' },
+    { name: 'Home', href: '#dashboard' },
+    { name: 'Articles', href: '#assets' },
+    { name: 'Membership', href: '#analytics' },
+    { name: 'T-Shirts', href: '#compliance' },
   ];
 
   return (
