@@ -5,7 +5,7 @@ export default function Form() {
   // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE:
   const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 
-  const [formData, setFormData] = useState({ name: '', email: '', role: 'Operator', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', role: 'Active Duty', message: '' });
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
   const handleSubmit = async (e) => {
@@ -21,7 +21,7 @@ export default function Form() {
       });
 
       setStatus('success');
-      setFormData({ name: '', email: '', role: 'Operator', message: '' });
+      setFormData({ name: '', email: '', role: 'Active Duty', message: '' });
     } catch (error) {
       console.error("Submission error:", error);
       setStatus('error');
@@ -30,30 +30,29 @@ export default function Form() {
 
   return (
     /* RESPONSIVE SPLIT GRID WRAPPER */
-    /* Stacks vertically on mobile, splits 50/50 dynamically on desktop */
     <div className="w-full max-w-[1600px] grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-4">
       
       {/* ==========================================
-          LEFT COLUMN: VISUAL CONTENT & METRICS BLOCK 
+          LEFT COLUMN: PBN BRANDING & IDENTITY BLOCK 
          ========================================== */}
       <div className="flex flex-col justify-center space-y-8 p-4 sm:p-8 lg:sticky lg:top-28">
         
         {/* Live Status Badge */}
         <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full w-fit">
           <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-          Central Command Intake Active
+          2026 Membership Registration Live
         </div>
 
         {/* Core Section Typography */}
         <div className="space-y-4">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-            Secure Client Portal & <br />
+            Stand With the Shield. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
-              Data Orchestration.
+              Join Police Blue Nation.
             </span>
           </h1>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl leading-relaxed">
-            Connect your workspace endpoints smoothly to our centralized logging engine. This custom interface routes your parameters natively into production pipelines without standard iframe overhead.
+            Gain access to an exclusive network dedicated to honoring, supporting, and connecting law enforcement personnel, advocates, and strategic partners. Secure your verified membership slot below.
           </p>
         </div>
 
@@ -66,8 +65,8 @@ export default function Form() {
               <Terminal className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-white text-sm font-semibold tracking-wide">Direct Pipeline</h4>
-              <p className="text-slate-500 text-xs mt-0.5">Bypasses local frames via structured APIs.</p>
+              <h4 className="text-white text-sm font-semibold tracking-wide">Verified Credentials</h4>
+              <p className="text-slate-500 text-xs mt-0.5">Secure validation for active, retired, and civilian allies.</p>
             </div>
           </div>
 
@@ -77,8 +76,8 @@ export default function Form() {
               <Layers className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-white text-sm font-semibold tracking-wide">Sheets Database</h4>
-              <p className="text-slate-500 text-xs mt-0.5">Automated row formatting on submission.</p>
+              <h4 className="text-white text-sm font-semibold tracking-wide">National Database</h4>
+              <p className="text-slate-500 text-xs mt-0.5">Instant ledger logging for priority updates and alerts.</p>
             </div>
           </div>
 
@@ -87,21 +86,21 @@ export default function Form() {
         {/* System Status Banner Note */}
         <div className="border-l-2 border-slate-700 pl-4 py-1 text-slate-500 text-xs max-w-md italic flex items-center gap-2">
           <Radio className="w-3.5 h-3.5 animate-pulse text-slate-400" />
-          All incoming packets are encrypted and processed by backend Apps Script environments in real-time.
+          All membership applications undergo encrypted routing and review by the administration desk.
         </div>
 
       </div>
 
       {/* ==========================================
-          RIGHT COLUMN: THE INTERACTIVE INPUT FORM 
+          RIGHT COLUMN: THE POLICE BLUE NATION FORM 
          ========================================== */}
       <div className="flex justify-center lg:justify-end w-full">
         <div className="w-full max-w-[800px] bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 sm:p-10 shadow-xl shadow-black/20">
           
           {/* Form Header */}
           <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-wide">Access Authorization & Intake</h2>
-            <p className="text-slate-400 text-xs sm:text-sm mt-1">Submit your parameters to log data directly to the central operations array.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-wide">Membership Enrollment</h2>
+            <p className="text-slate-400 text-xs sm:text-sm mt-1">Submit your verification parameters to initiate your enrollment file.</p>
           </div>
 
           {status === 'success' ? (
@@ -124,13 +123,13 @@ export default function Form() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Name Input */}
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-semibold tracking-wider text-slate-400 uppercase">Operator Name</label>
+                  <label className="text-xs font-semibold tracking-wider text-slate-400 uppercase">Full Name</label>
                   <input 
                     type="text" 
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    placeholder="Identify resource"
+                    placeholder="Enter official name"
                     className="w-full bg-[#0B1528]/80 text-white text-sm border border-slate-800 focus:border-blue-500 rounded-xl px-4 py-3 transition-colors outline-none placeholder:text-slate-600"
                   />
                 </div>
@@ -151,28 +150,28 @@ export default function Form() {
 
               {/* Role Dropdown */}
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold tracking-wider text-slate-400 uppercase">Functional Designation</label>
+                <label className="text-xs font-semibold tracking-wider text-slate-400 uppercase">Membership Classification</label>
                 <select 
                   value={formData.role}
                   onChange={(e) => setFormData({...formData, role: e.target.value})}
                   className="w-full bg-[#0B1528]/80 text-white text-sm border border-slate-800 focus:border-blue-500 rounded-xl px-4 py-3 transition-colors outline-none appearance-none cursor-pointer"
                 >
-                  <option value="Operator">Operator (Standard Clearance)</option>
-                  <option value="Supervisor">Supervisor (Elevated Command)</option>
-                  <option value="Consultant">External Consultant Portfolio</option>
-                  <option value="Administrator">SysAdmin (Full Terminal Override)</option>
+                  <option value="Active Duty">Active Duty Law Enforcement</option>
+                  <option value="Retired LE">Retired Law Enforcement Officer</option>
+                  <option value="Civilian Ally">Civilian Supporter / Ally</option>
+                  <option value="Corporate Sponsor">Corporate / Business Sponsor</option>
                 </select>
               </div>
 
               {/* Message TextArea */}
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold tracking-wider text-slate-400 uppercase">Payload Specification (Message)</label>
+                <label className="text-xs font-semibold tracking-wider text-slate-400 uppercase">Statement of Purpose / Notes</label>
                 <textarea 
                   rows="4"
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  placeholder="Input explicit mission statements, documentation requests, or program queries..."
+                  placeholder="Briefly state your department affiliation, background, or motivation for joining the Police Blue Nation initiative..."
                   className="w-full bg-[#0B1528]/80 text-white text-sm border border-slate-800 focus:border-blue-500 rounded-xl px-4 py-3 transition-colors outline-none placeholder:text-slate-600 resize-none"
                 />
               </div>
@@ -194,11 +193,11 @@ export default function Form() {
                 {status === 'loading' ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    <span>Syncing Database Array...</span>
+                    <span>Processing Enrollment...</span>
                   </>
                 ) : (
                   <>
-                    <span>Commit Submissions</span>
+                    <span>Request Enrollment</span>
                     <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </>
                 )}
