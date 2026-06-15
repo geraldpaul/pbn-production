@@ -3,20 +3,18 @@ import { ArrowUpRight, Play } from 'lucide-react';
 
 export default function Hero() {
   return (
-    /* RESPONSIVE WRAPPER: Pinned to the top with zero empty space */
-    /* Mobile matches the natural wide aspect ratio (32/11) so nothing cuts off */
-    <div className="relative w-full aspect-[32/11] max-h-[500px] bg-[#0B1528] overflow-hidden group">
+    /* RESPONSIVE WRAPPER: Now scales up to exactly 600px to match your native image height */
+    <div className="relative w-full aspect-[32/11] md:h-[600px] max-h-[600px] bg-[#0B1528] overflow-hidden group">
       
-      {/* Dynamic Responsive Image Rendering Engine */}
-      {/* object-contain on mobile ensures 100% visibility; object-cover handles wide desktops */}
+      {/* Dynamic Image Engine */}
+      {/* md:object-contain ensures the full 600px height is honored on desktop without vertical or horizontal clipping */}
       <img 
         src="/hero-banner.png"
         alt="Police Blue Nation Banner" 
-        className="w-full h-full object-contain md:object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+        className="w-full h-full object-contain md:object-contain transition-transform duration-700 group-hover:scale-[1.01]"
       />
 
-      {/* FIXED INTERACTIVE ACTION BUTTON CONTAINER */}
-      {/* Uses smart responsive positioning to stay perfectly aligned across devices */}
+      {/* INTERACTIVE BUTTON CONTAINER */}
       <div className="absolute left-4 sm:left-6 md:left-12 top-1/2 -translate-y-1/2 z-10 flex flex-row items-center gap-2 sm:gap-4">
         
         {/* Core Action Button */}
