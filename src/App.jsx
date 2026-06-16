@@ -13,15 +13,15 @@ export default function App() {
       {/* 2. Main Workspace Layout Flow */}
       <main className="w-full flex flex-col items-center justify-start p-4 sm:p-8 gap-12 pb-24">
         
-        {/* Full-width Primary Hero Banner */}
+        {/* Full-width Primary Hero Banner (Keeps buttons by default) */}
         <Hero />
         
         {/* Completely modular Split Screen (Content + Form Array) */}
         <Form />
 
-        {/* Second Banner Block: Scaled cleanly using the same aspect container */}
+        {/* Second Banner Block: Reused with showButtons set to false */}
         <div className="w-full max-h-[600px] aspect-[32/11]">
-          <Hero imageSrc="/banner2.png" />
+          <Hero imageSrc="/banner2.png" showButtons={false} />
         </div>
 
       </main>
