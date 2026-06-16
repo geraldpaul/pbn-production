@@ -2,28 +2,40 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Form from './components/Form';
+import TextTicker from './components/TextTicker';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0B1528] flex flex-col font-sans antialiased">
+    <div className="min-h-screen bg-[#0B1528] flex flex-col font-sans antialiased selection:bg-blue-500/30 selection:text-white">
       
-      {/* 1. Sticky Navigation Header */}
+      {/* 1. Header Bar */}
       <Navbar />
 
-      {/* 2. Main Workspace Layout Flow */}
-      <main className="w-full flex flex-col items-center justify-start p-4 sm:p-8 gap-12 pb-24">
-        
-        {/* Full-width Primary Hero Banner (Keeps buttons by default) */}
+      {/* 
+        Seamless Banner & Ticker Stack 
+        - max-w-7xl mx-auto centers it on desktop matching your project bounds
+        - flex flex-col with NO gap makes them touch edges perfectly
+      */}
+      <div className="w-full max-w-7xl mx-auto flex flex-col">
+        {/* 2. Primary Top Hero Banner */}
         <Hero />
-        
-        {/* Completely modular Split Screen (Content + Form Array) */}
-        <Form />
 
-        {/* Second Banner Block: Reused with showButtons set to false */}
-        <div className="w-full max-h-[600px] aspect-[32/11]">
-          <Hero imageSrc="/banner2.png" showButtons={false} />
+        {/* 3. Text Ticker (Flushed tight between both banners) */}
+        <TextTicker />
+
+        {/* 4. Secondary Banner 2 */}
+        <Hero imageSrc="/banner2.png" showButtons={false} />
+      </div>
+
+      {/* 
+        Main Interface Container (Form Workspace)
+        - Keeping the layout padding here gives your data cards professional breathing room
+      */}
+      <main className="w-full max-w-7xl mx-auto p-4 sm:p-8 pb-24 mt-6">
+        {/* 5. Core Intake Form Layout */}
+        <div className="w-full">
+          <Form />
         </div>
-
       </main>
       
     </div>

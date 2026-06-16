@@ -1,42 +1,30 @@
 import React from 'react';
 
 export default function TextTicker() {
-  const tickerItems = [
-    "POLICE BLUE NATION",
-    "STAND WITH THE SHIELD",
-    "VERIFIED SUPPORT",
-    "COMMUNITY FIRST",
-    "HONORING ACTIVE & RETIRED"
+  // The text strings you want to loop across the screen
+  const items = [
+    "POLICE BLUE NATION PLATFORM IS NOW LIVE",
+    "SECURE DEPLOYMENT VERIFIED",
+    "GLOBAL OPERATIONS ACTIVE",
+    "COMPLIANCE AND SAFETY STANDARDS LOCKED"
   ];
 
-  // We combine the array and repeat it to fill up screen real estate for the seamless loop
-  const doubleItems = [...tickerItems, ...tickerItems, ...tickerItems];
+  // We duplicate the array to create a seamless, gapless infinite scrolling loop
+  const doubleItems = [...items, ...items, ...items];
 
   return (
-    /* THE CONTROLLING LAYER: Exact short height, full layout bleed, and hidden overflow */
-    <div className="w-full h-14 md:h-18 bg-[#0B1528]/80 backdrop-blur-md border-y border-slate-800/60 flex items-center overflow-hidden relative">
-      
-      {/* Visual Depth: Vignette gradient masks to fade the text in and out nicely at the screen edges */}
-      <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0B1528] to-transparent z-10 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0B1528] to-transparent z-10 pointer-events-none" />
-
-      {/* THE KINETIC ENGINE: Infinite moving track */}
-      <div className="flex whitespace-nowrap gap-16 animate-marquee performance-optimize">
+    <div className="w-full bg-blue-950/40 border-y border-blue-500/20 py-3 overflow-hidden whitespace-nowrap selective:bg-transparent">
+      <div className="inline-block animate-marquee-flow">
         {doubleItems.map((text, index) => (
-          <div key={index} className="flex items-center gap-16 select-none">
-            
-            {/* The Text Style: Premium uppercase bold typography with a clean gradient */}
-            <span className="text-sm md:text-base font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-slate-400 via-white to-slate-500 uppercase">
-              {text}
-            </span>
-
-            {/* Micro Dot Divider */}
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 shadow-sm shadow-blue-500/50" />
-            
-          </div>
+          <span 
+            key={index} 
+            className="inline-flex items-center text-xs md:text-sm font-mono font-semibold tracking-wider text-blue-400 mx-8"
+          >
+            <span className="w-2 h-2 rounded-full bg-blue-500 mr-3 animate-pulse" />
+            {text}
+          </span>
         ))}
       </div>
-
     </div>
   );
 }
