@@ -1,19 +1,18 @@
 import React from 'react';
 import { ArrowUpRight, Play } from 'lucide-react';
 
-export default function Hero() {
+// Added imageSrc prop with a fallback to your primary banner
+export default function Hero({ imageSrc = "/hero-banner.png" }) {
   return (
     /* RESPONSIVE WRAPPER: Now scales up to exactly 600px to match your native image height */
     <div className="relative w-full aspect-[32/11] md:h-[600px] max-h-[600px] bg-[#0B1528] overflow-hidden group">
       
       {/* Dynamic Image Engine */}
-      {/* md:object-contain ensures the full 600px height is honored on desktop without vertical or horizontal clipping */}
-<img 
-  src="/hero-banner.png"
-  alt="Police Blue Nation Banner" 
-  /* ADDED: object-top pulls the image right to the very top edge of the box */
-  className="w-full h-full object-contain md:object-contain object-top md:object-top transition-transform duration-700 group-hover:scale-[1.01]"
-/>
+      <img 
+        src={imageSrc}
+        alt="Police Blue Nation Banner" 
+        className="w-full h-full object-contain md:object-contain object-top md:object-top transition-transform duration-700 group-hover:scale-[1.01]"
+      />
 
       {/* INTERACTIVE BUTTON CONTAINER */}
       <div className="absolute left-4 sm:left-6 md:left-12 top-1/2 -translate-y-1/2 z-10 flex flex-row items-center gap-2 sm:gap-4">
