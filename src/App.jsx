@@ -2,8 +2,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Form from './components/Form';
-import LogoScroll from './components/LogoScroll'; // 1. Import the Logo Scroll
-import MagazineGrid from './components/MagazineGrid'; // 1. Import the grid block
+import LogoScroll from './components/LogoScroll'; 
+import MagazineGrid from './components/MagazineGrid'; // Imported perfectly!
 
 export default function App() {
   return (
@@ -17,11 +17,16 @@ export default function App() {
         {/* Primary Top Hero Banner */}
         <Hero />
 
-        {/* 2. Logo Scroll (Flushed tight between both banners) */}
+        {/* Logo Scroll (Flushed tight between both banners) */}
         <LogoScroll />
 
         {/* Secondary Banner 2 */}
         <Hero imageSrc="/banner3.png" showButtons={false} />
+        
+        {/* ========================================================= */}
+        {/* PLUGGED IN HERE: Renders right below the second banner    */}
+        {/* ========================================================= */}
+        <MagazineGrid />
       </div>
 
       {/* Main Interface Container (Form Workspace) */}
