@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function MagazineGrid() {
-  // Your official 6 asset records structured cleanly into a 2x3 responsive matrix
+  // Data structure mapped with your direct magazine link locations
   const magazines = [
     { 
       id: 1, 
@@ -9,7 +9,8 @@ export default function MagazineGrid() {
       subtitle: "Michael Barron - Life behind the badge 108 to protect and serve",
       issue: "Issue 1", 
       date: "June 2026", 
-      cover: "/magz_june.png" 
+      cover: "/magz_june.png",
+      url: "https://www.yumpu.com/kiosk/theBLUES"
     },
     { 
       id: 2, 
@@ -17,7 +18,8 @@ export default function MagazineGrid() {
       subtitle: "Candlelight vigil",
       issue: "Issue 2", 
       date: "May 2026", 
-      cover: "/may_2026.png" 
+      cover: "/may_2026.png",
+      url: "https://www.yumpu.com/kiosk/theBLUES/may-2026-blues-vol-42-no5/71103950"
     },
     { 
       id: 3, 
@@ -25,7 +27,8 @@ export default function MagazineGrid() {
       subtitle: "Special Memorial Issue",
       issue: "Special Issue", 
       date: "2025", 
-      cover: "/2025_memorial.png" 
+      cover: "/2025_memorial.png",
+      url: "https://www.yumpu.com/kiosk/theBLUES/2025-fallen-officers-memorial-issue/71103847"
     },
     { 
       id: 4, 
@@ -33,7 +36,8 @@ export default function MagazineGrid() {
       subtitle: "War stories Fallen officers",
       issue: "Recent Issue", 
       date: "April 2026", 
-      cover: "/april_2026.png" 
+      cover: "/april_2026.png",
+      url: "https://www.yumpu.com/kiosk/theBLUES/april-2026-blues-vol-42-no4/71080025"
     },
     { 
       id: 5, 
@@ -41,7 +45,8 @@ export default function MagazineGrid() {
       subtitle: "Supporting Law Enforcement in Texas",
       issue: "Recent Issue", 
       date: "March 2026", 
-      cover: "/march_2026.png" 
+      cover: "/march_2026.png",
+      url: "https://www.yumpu.com/kiosk/theBLUES/march-2026-blues-vol-42-no3/71053703"
     },
     { 
       id: 6, 
@@ -49,7 +54,8 @@ export default function MagazineGrid() {
       subtitle: "US Marshals",
       issue: "Recent Issue", 
       date: "Feb 2026", 
-      cover: "/feb_2026.png" 
+      cover: "/feb_2026.png",
+      url: "https://www.yumpu.com/kiosk/theBLUES/feb-2026-blues-vol-42-no2/70927734"
     },
   ];
 
@@ -61,19 +67,27 @@ export default function MagazineGrid() {
           <span className="text-xs font-mono font-bold tracking-widest text-blue-500 uppercase">National Publications</span>
           <h2 className="text-xl sm:text-2xl font-mono font-bold text-white uppercase tracking-tight mt-1">Recent Magazines</h2>
         </div>
-        <button className="self-start sm:self-center text-xs font-mono font-bold bg-slate-900 hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">
+        <a 
+          href="https://www.yumpu.com/kiosk/theBLUES" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="self-start sm:self-center text-xs font-mono font-bold bg-slate-900 hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300 text-center"
+        >
           View Full Catalog →
-        </button>
+        </a>
       </div>
 
-      {/* Responsive Grid Matrix: Exactly 2 rows and 3 columns on desktops */}
+      {/* Responsive Grid Matrix */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {magazines.map((mag) => (
-          <div 
+          <a 
             key={mag.id} 
+            href={mag.url}
+            target="_blank" 
+            rel="noopener noreferrer"
             className="group relative flex flex-col bg-[#0b1425]/40 border border-slate-800/50 rounded-xl overflow-hidden hover:border-blue-500/30 transition-all duration-300 shadow-lg hover:shadow-blue-950/20"
           >
-            {/* Magazine Cover Window - Formatted for your 430 x 560 portrait ratio covers */}
+            {/* Magazine Cover Window */}
             <div className="relative aspect-[430/560] w-full overflow-hidden bg-slate-950">
               <img 
                 src={mag.cover} 
@@ -100,7 +114,7 @@ export default function MagazineGrid() {
                 {mag.subtitle}
               </p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
