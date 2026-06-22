@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Form from './components/Form';
 import LogoScroll from './components/LogoScroll'; // 1. Import the Logo Scroll
+import MagazineGrid from './components/MagazineGrid'; // 1. Import the grid block
 
 export default function App() {
   return (
